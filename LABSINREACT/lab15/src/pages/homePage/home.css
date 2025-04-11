@@ -1,0 +1,80 @@
+.counter {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .positive {
+    color: green;
+  }
+  
+  .negative {
+    color: red;
+  }
+  
+  .zero {
+    color: black;
+  }
+  
+
+.main{
+    margin: 100px auto;
+    width: 500px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttons{
+    display: flex;
+    gap: 15px;
+    
+}
+.plus{
+    background-color: green;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.reset{
+    background-color: blue;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.minus{
+    background-color: red;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.auto-btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0s ease;
+  }
+  
+  .auto-btn.active {
+    background-color: purple;
+  }
+  
