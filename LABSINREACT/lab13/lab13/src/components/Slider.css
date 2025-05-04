@@ -1,0 +1,40 @@
+.slider-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider {
+    position: relative;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
+  
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+  }
+  
+  .slider-btn.left {
+    left: 10px;
+  }
+  
+  .slider-btn.right {
+    right: 10px;
+  }
+  
