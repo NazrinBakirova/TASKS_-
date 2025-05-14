@@ -42,6 +42,6 @@ export const QuizProvider = ({ children }: { children: ReactNode }) => {
 
 export const useQuiz = () => {
   const ctx = useContext(QuizContext);
-  if (!ctx) throw new Error('useQuiz must be used inside QuizProvider');
+
   return ctx;
 };

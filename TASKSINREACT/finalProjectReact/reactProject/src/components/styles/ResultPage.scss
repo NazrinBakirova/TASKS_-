@@ -1,0 +1,110 @@
+$purple: #A729F5;
+$light_purple: #bf7fe7;
+$dark_grey: #313E51;
+$grey: #626C7F;
+
+body {
+  font-size: 10px;
+  font-family: "Rubik", sans-serif;
+  background-color: #edf0f7;
+}
+
+.result_container {
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22vh;
+  height: max-content;
+  align-items: flex-start;
+  position: relative; 
+
+  
+  .result_topic_header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $purple;
+    background-color: #f4f3ff;
+    padding: 8px 16px;
+    border-radius: 12px;
+    z-index: 10;
+  }
+
+  .result_left {
+    flex: 1;
+
+ .result_topic_header{
+  color: $dark_grey;
+ }
+    .result_topic_title {
+      font-size: 18px;
+      font-weight: 600;
+      color: $purple;
+      margin-bottom: 16px;
+    }
+
+    .result_title {
+      font-size: 48px;
+      margin: 30px 0 10px;
+      color: $dark_grey;
+      font-weight: 300;
+    }
+
+    .result_subtitle {
+      font-size: 48px;
+      font-weight: 500;
+      color: $dark_grey;
+    }
+  }
+
+  .result_card_items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .result_card {
+    width: 534px;
+    height: 368px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    align-items: center;
+    padding-top: 15vh;
+
+    .result_score {
+      font-size: 140px;
+      font-weight: bold;
+      color: $dark_grey;
+    }
+
+    .result_total {
+      font-size: 24px;
+      color: #999;
+      margin: 5px 0 30px;
+    }
+  }
+
+  .result_btn {
+    padding: 24px 32px;
+    font-size: 28px;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    background-color: $purple;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: "Rubik", sans-serif;
+
+    &:hover {
+      background-color: $light_purple;
+    }
+  }
+}

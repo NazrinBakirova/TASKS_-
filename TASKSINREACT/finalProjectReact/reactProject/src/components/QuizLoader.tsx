@@ -10,8 +10,8 @@ export default function QuizLoader({ category }: { category: string }) {
     if (data) startQuiz(data);
   }, [data]);
 
-  if (loading) return <p>Загрузка…</p>;
-  if (error)   return <p>Ошибка: {error}</p>;
+  if (loading) return <p>loading...</p>;
+  if (error)   return <p>error: {error}</p>;
 
-  return null; // управление перейдёт к QuestionCard
+  return null;
 }

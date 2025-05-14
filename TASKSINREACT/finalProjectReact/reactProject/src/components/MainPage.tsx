@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import QuizLoader from './QuizLoader';
-import './MainPage.css'
+import './styles/MainPage.css'
 const categories = [
   { label: 'HTML',          value: 'html' },
   { label: 'CSS',           value: 'css' },

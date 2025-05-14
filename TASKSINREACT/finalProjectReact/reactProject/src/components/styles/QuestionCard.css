@@ -1,0 +1,114 @@
+body {
+  font-size: 10px;
+  font-family: "Rubik", sans-serif;
+  background-color: #edf0f7;
+}
+
+.main {
+  padding-top: 25vh;
+}
+
+.question_card {
+  position: relative;
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  width: 1160px;
+  align-items: flex-start;
+  gap: 20px;
+}
+.question_card_title {
+  width: 450px;
+  height: 200px;
+}
+.question_card_title_number {
+  font-size: 1rem;
+  color: #626C7F;
+  font-style: italic;
+}
+.question_card_title_name {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #313E51;
+  margin-top: 30px;
+}
+.question_card .answer_list_part {
+  display: flex;
+  flex-direction: column;
+}
+.question_card .answer_list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+  width: 500px;
+}
+.question_card .answer_list .answer_option {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  border: 2px solid #ddd;
+  border-radius: 24px;
+  padding: 16px 35px;
+  text-align: left;
+  width: 500px;
+  height: 70px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #313E51;
+}
+.question_card .answer_list .answer_option:hover {
+  border-color: #c5bfff;
+}
+.question_card .answer_list .answer_option .letter_box {
+  background-color: #eee;
+  color: #626C7F;
+  font-weight: bold;
+  padding: 12px 15px;
+  border-radius: 6px;
+  min-width: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.question_card .answer_list .answer_option .letter_box span {
+  color: #313E51;
+}
+.question_card .answer_list .answer_option .letter_box:hover {
+  background-color: #F6E7FF;
+}
+.question_card .answer_list .answer_option.selected {
+  border-color: #A729F5;
+}
+.question_card .answer_list .answer_option.correct {
+  border: 3px solid #26D782;
+}
+.question_card .answer_list .answer_option.wrong {
+  border: 3px solid #EE5454;
+}
+.question_card_button {
+  padding: 20px 24px;
+  background-color: #A729F5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.question_card_button:hover {
+  background-color: #bf7fe7;
+}
+.question_card .error {
+  color: #EE5454;
+  margin-top: 10px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=QuestionCard.css.map */
