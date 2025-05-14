@@ -42,17 +42,17 @@ body {
   flex-direction: column;
   gap: 16px;
   margin-bottom: 30px;
-  width: 500px;
+  width: 450px;
 }
 .question_card .answer_list .answer_option {
   display: flex;
   align-items: center;
   gap: 32px;
-  border: 2px solid #ddd;
+  border: 2px solid #edf0f7;
   border-radius: 24px;
   padding: 16px 35px;
   text-align: left;
-  width: 500px;
+  width: 450px;
   height: 70px;
   cursor: pointer;
   background-color: #fff;
