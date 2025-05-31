@@ -1,0 +1,86 @@
+
+$pink:#FB2E86;
+$blue:#2A1B91;
+$OffNavyBlue:#485199;
+$NavyBlue: #1D1B70;
+$red:#DC3F4E;
+$purple:#763DD7;
+$OffPurple: #9467B0;
+$Font:#0D0E43;
+
+$Lato:  "Lato", sans-serif;
+$Josefine:"Josefin Sans", sans-serif;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Maven+Pro:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 10px;
+}
+.home_header {
+    display: flex;
+    width: max;
+    height: 640px;
+    
+  
+    background-color: #F2F0FF;
+    &_img{
+     align-self: flex-start;
+     
+    }
+    &_parts{
+        display: flex;
+       gap: 100px;
+        align-items: center;
+    }
+    &_left{
+        margin-right: 5%;
+        display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       &_title{
+        width: 500px;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-family: $Lato;
+        font-size: 1rem;
+        color: $pink;
+        font-weight: bold;
+        &_main{
+            font-size: 2rem;
+            width: 600px;
+            font-family: $Josefine;
+         color: black;
+         line-height: 60px;
+        }
+        &_discription {
+            color: $OffNavyBlue;
+            line-height: 25px;
+            opacity: 50%;
+            font-size: 0.8rem;
+            width: 500px;
+        }
+       }
+       &_btn{
+        padding-top: 10px;
+        button{
+            padding: 12px 34px;
+            background-color: $pink;
+            color: white;
+            border-radius: 3px;
+            border: none;
+            font-family: $Josefine;
+            font-size: 0.8rem;
+            cursor: pointer;
+           }
+       } 
+    }
+}
