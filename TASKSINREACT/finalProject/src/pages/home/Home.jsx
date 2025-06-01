@@ -1,37 +1,20 @@
 import React from 'react'
 import Header from '../../components/header/Header'
-import lampImg from './imgs/lamp.png';
-import SofaImg from './imgs/sofaHeader.png';
-import './homePageStyle/home.css'
+import HomeHeader from './homeComponents/header/HomeHeader';
+import Featured from './homeComponents/featured/Featured';
+import Leatest from './homeComponents/leatest/Leatest';
+import Offer from './homeComponents/offers/Offer';
+import Banner from './homeComponents/midBanner/Banner';
 
 const Home = () => {
   return (
     <div>
      <Header/>
-       <div className='home_header'>
-       <div className='home_header_img'><img src={lampImg} width={350} height={350} /></div>
-       <div className='home_header_parts'>
-        <div className='home_header_left'>
-          <div className="home_header_left_title">
-            <p>Best Furniture For Your Castle....</p>
-            <div className="home_header_left_title_main">
-              <h2>New Furniture Collection</h2>
-              <h2> Trends in 2020</h2>
-            </div>
-            <div className="home_header_left_title_discription">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing
-              in phasellus non in justo.</p>
-            </div>
-          </div>
-          
-          <div className="home_header_left_btn"><button className="btn">Shop Now</button></div>
-       
-        </div>
-        <div className="home_header_right">
-          <div className="home_header_right_img"><img src={SofaImg} width={600} height={580}/></div>
-        </div>
-        </div>
-       </div>
+      <HomeHeader/>
+      <Featured/>
+      <Leatest/>
+      <Offer/>
+      <Banner/>
     </div>
   )
 }

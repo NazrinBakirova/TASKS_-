@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Maven+Pro:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+}
+
+.banner_table {
+  width: max;
+  height: 500px;
+  background-color: #F1F0FF;
+  padding-top: 50px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner_table_items {
+  width: 1000px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.banner_table_items_info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 550px;
+  gap: 30px;
+}
+.banner_table_items_info h3 {
+  font-size: 2.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: #0D0E43;
+  width: 550px;
+}
+.banner_table_items_info_dis {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.banner_table_items_info_dis p {
+  color: #ACABC3;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  line-height: 175%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.banner_table_items_info_btn {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  color: #0D0E43;
+  font-size: 0.8rem;
+}
+.banner_table_items_info_btn button {
+  padding: 10px 30px;
+  background-color: #FB2E86;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+  cursor: pointer;
+}/*# sourceMappingURL=banner.css.map */
