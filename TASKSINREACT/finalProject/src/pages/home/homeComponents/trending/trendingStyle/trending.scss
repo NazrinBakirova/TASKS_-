@@ -1,0 +1,135 @@
+
+$pink:#FB2E86;
+$blue:#2A1B91;
+$OffNavyBlue:#485199;
+$NavyBlue: #1D1B70;
+$red:#DC3F4E;
+$purple:#763DD7;
+$OffPurple: #9467B0;
+$Font:#151875;
+
+$Lato:  "Lato", sans-serif;
+$Josefine:"Josefin Sans", sans-serif;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Maven+Pro:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.trending {
+  padding: 40px;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: $Josefine;
+
+  &_title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: $Font;
+    
+  }
+
+  &_top {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    .trending_card {
+      background: #fff;
+      border-radius: 4px;
+      padding: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      width: 200px;
+
+      &_img {
+        background-color: #F5F6F8;
+        img {
+          max-width: 100%;
+          height: 150px;
+          object-fit: contain;
+        }
+      }
+
+      .title {
+        font-weight: 500;
+        margin: 10px 0;
+        color: $Font;
+        font-family: $Lato;
+      }
+
+      .price {
+        font-weight: bold;
+        color: $Font;
+
+        .old_price {
+          color: $Font;
+          opacity: 50%;
+          text-decoration: line-through;
+          font-weight: normal;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &_bottom_two {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    justify-content: space-between;
+
+    .left_banner,
+    .middle_banner {
+      flex: 1;
+      border-radius: 4px;
+      padding: 20px;
+      position: relative;
+    
+      overflow: hidden;
+      height: 270px; // стало ниже
+  width: 420px;
+      h4 {
+        font-size: 18px;
+        color: $Font;
+        margin-bottom: 5px;
+      }
+
+      a {
+        color: $pink;
+        font-family: $Lato;
+        font-weight: bold;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+      img {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        height: 200px; 
+        max-width: 60%; 
+        object-fit: contain;
+      }
+      
+    }
+
+    .left_banner {
+      background: #FFF6FB;
+    }
+
+    .middle_banner {
+      background: #EEEFFB;
+    }
+  }
+}

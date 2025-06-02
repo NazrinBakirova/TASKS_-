@@ -55,9 +55,11 @@ a {
   align-items: center;
 }
 .header_title {
-  font-size: 3rem;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 3.4em;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 .header_menu ul {
   list-style: none;

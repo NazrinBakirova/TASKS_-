@@ -72,9 +72,12 @@ a {
    align-items: center;
  
    &_title {
-     font-size: 3rem;
-     font-family: $Josefine;
-    font-weight: bold;
+    font-family: $Josefine;
+    font-weight: 700;
+    font-size: 3.4em;
+    line-height: 100%;
+    letter-spacing: 0%;
+    
    }
  
    &_menu {
