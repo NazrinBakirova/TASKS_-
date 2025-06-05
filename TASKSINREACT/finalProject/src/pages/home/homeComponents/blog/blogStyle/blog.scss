@@ -1,0 +1,97 @@
+$pink: #FB2E86;
+$blue: #2A1B91;
+$OffNavyBlue: #485199;
+$NavyBlue: #1D1B70;
+$red: #DC3F4E;
+$purple: #763DD7;
+$OffPurple: #9467B0;
+$Font: #151875;
+
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Maven+Pro:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+$Lato: "Lato", sans-serif;
+$Josefine: "Josefin Sans", sans-serif;
+
+.blog-section {
+    width: 1631px;
+  padding: 40px 100px;
+  background-color: #fff;
+  font-family: $Josefine;
+  margin: 0 auto;
+  .blog-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: $Font;
+    margin-bottom: 50px;
+  }
+
+  .blog-list {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .blog-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.05);
+    width: 370px;
+    height: 493px;
+   
+    
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 40px 80px rgba(118, 61, 215, 0.2); // $purple
+    }
+
+    img {
+      width: 100%;
+      height: 255px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+      p {
+        font-size: 14px;
+        color: #72718F;
+        font-family: $Lato;
+        font-weight: 400;
+        
+        line-height: 30px;
+        letter-spacing: 0%;
+        
+        span {
+          color: $pink;
+          margin-right: 10px;
+        }
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 700;
+        color: $Font;
+        margin: 10px 0 15px 0;
+      }
+
+      a {
+        color: $Font;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          color: $pink;
+        }
+      }
+    }
+  }
+}

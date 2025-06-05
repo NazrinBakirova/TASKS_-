@@ -1,0 +1,84 @@
+.top {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.top__title {
+  font-size: 28px;
+  color: #2e2eaa;
+  margin-bottom: 40px;
+}
+.top__list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.top__item {
+  width: 160px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.top__item.active .top__img-wrapper {
+  border: 3px solid #a29bfe;
+  box-shadow: 0 0 15px rgba(162, 155, 254, 0.3);
+}
+.top__item.active .top__badge {
+  display: block;
+}
+.top__img-wrapper {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #f8f8ff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.3s;
+}
+.top__img-wrapper img {
+  width: 90px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.top__badge {
+  position: absolute;
+  bottom: 10px;
+  background: #52d38a;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: none;
+}
+.top__name {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2e2eaa;
+}
+.top__price {
+  font-size: 13px;
+  color: #333;
+}
+.top__dots {
+  margin-top: 30px;
+}
+.top__dots .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.top__dots .dot.active {
+  background: #d6368f;
+  transform: scale(1.3);
+}/*# sourceMappingURL=top.css.map */
