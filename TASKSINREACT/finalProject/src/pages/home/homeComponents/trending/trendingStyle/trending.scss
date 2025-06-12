@@ -97,7 +97,7 @@ $Josefine:"Josefin Sans", sans-serif;
       position: relative;
     
       overflow: hidden;
-      height: 270px; // стало ниже
+      height: 270px; 
   width: 420px;
       h4 {
         font-size: 18px;
@@ -132,4 +132,13 @@ $Josefine:"Josefin Sans", sans-serif;
       background: #EEEFFB;
     }
   }
+}
+.btn{
+  background: none;
+ color: $pink;
+ border: none;
+ cursor: pointer;
+ &:hover {
+  text-decoration: underline;
+}
 }

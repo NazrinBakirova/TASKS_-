@@ -1,5 +1,5 @@
 import React from "react";
-import "./footer.css";
+import "./footer.scss";
 
 const Footer = () => {
   return (
@@ -7,10 +7,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-column logo-column">
           <h2 className="footer-logo">Hekto</h2>
-          <div className="footer-subscribe">
-            <input type="email" placeholder="Enter Email Address" />
-            <button>Sign Up</button>
-          </div>
+          
           <p className="footer-contact">
             Contact Info <br />
             17 Princess Road, London, Greater London NW1 8JR, UK

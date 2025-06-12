@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchProductsByCategory } from "../../../../api/Api";
-import "./topStyle/top.css";
+import "./topStyle/top.scss";
 
 const CATEGORY_MAP = [
   { label: "Furniture", category: "furniture" },

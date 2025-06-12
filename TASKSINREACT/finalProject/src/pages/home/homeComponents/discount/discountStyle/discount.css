@@ -119,4 +119,70 @@
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media screen and (max-width: 480px) {
+  .discount {
+    padding: 30px 10px;
+  }
+  .discount__header h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .discount__header .discount__categories {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .discount__header .discount__categories span {
+    font-size: 12px;
+  }
+  .discount__header .discount__categories span.active {
+    font-size: 12px;
+  }
+  .discount__header .discount__categories span::after {
+    margin: 0 5px;
+  }
+  .discount__content {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .discount__content .discount__text h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .discount__content .discount__text h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .discount__content .discount__text p {
+    font-size: 13px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+  .discount__content .discount__text .discount__features {
+    gap: 10px 20px;
+  }
+  .discount__content .discount__text .discount__features li {
+    font-size: 12px;
+    padding-left: 18px;
+  }
+  .discount__content .discount__text .discount__features li::before {
+    left: 0;
+    font-size: 12px;
+  }
+  .discount__content .discount__text button {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+  .discount__content .discount__image {
+    margin-top: 20px;
+  }
+  .discount__content .discount__image .circle-bg {
+    width: 220px;
+    height: 220px;
+  }
+  .discount__content .discount__image img {
+    width: 200px;
+  }
 }/*# sourceMappingURL=discount.css.map */

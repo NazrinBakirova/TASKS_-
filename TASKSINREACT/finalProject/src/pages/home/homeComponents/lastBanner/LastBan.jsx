@@ -1,5 +1,5 @@
 import React from 'react'
-import './lastBanStyle/lastBan.css'
+import './lastBanStyle/lastBan.scss'
 import emblems from './imgs/image 1174.png'
 
 const LastBan = () => {

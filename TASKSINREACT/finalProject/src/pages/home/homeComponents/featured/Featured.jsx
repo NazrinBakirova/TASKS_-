@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { fetchProductsByCategory } from "../../../../api/Api";
-import "./featuredStyle/featured.css";
+import "./featuredStyle/featured.scss";
 import { FaHeart, FaRegHeart, FaShoppingCart } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart as addToCartAction } from "../../../../redux/cartSlice";
 
 const categories = ["furniture", "smartphones", "laptops", "laptops"];
 
 const Featured = () => {
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart.items);
+
   const [products, setProducts] = useState([]);
   const [slideIndex, setSlideIndex] = useState(0);
   const [favorites, setFavorites] = useState([]);
-  const [cart, setCart] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null); // 👈 модалка
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     const fetchAll = async () => {
@@ -35,9 +39,9 @@ const Featured = () => {
     );
   };
 
-  const addToCart = (product) => {
-    if (!cart.find((item) => item.id === product.id)) {
-      setCart([...cart, product]);
+  const handleAddToCart = (product) => {
+    if (!cartItems.find((item) => item.id === product.id)) {
+      dispatch(addToCartAction(product));
     }
   };
 
@@ -58,9 +62,12 @@ const Featured = () => {
             <div
               className="product_card"
               key={product.id}
-              onClick={() => setSelectedProduct(product)} // 👈 открыть модалку
+              onClick={() => setSelectedProduct(product)}
             >
-              <div className="card_actions" onClick={(e) => e.stopPropagation()}>
+              <div
+                className="card_actions"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <span onClick={() => toggleFavorite(product.id)}>
                   {favorites.includes(product.id) ? (
                     <FaHeart className="icon heart active" />
@@ -68,7 +75,7 @@ const Featured = () => {
                     <FaRegHeart className="icon heart" />
                   )}
                 </span>
-                <span onClick={() => addToCart(product)}>
+                <span onClick={() => handleAddToCart(product)}>
                   <FaShoppingCart className="icon cart" />
                 </span>
               </div>
@@ -95,21 +102,40 @@ const Featured = () => {
               key={i}
               className={i === slideIndex ? "line active" : "line"}
               onClick={() => setSlideIndex(i)}
-            ></span>
+            />
           ))}
         </div>
       </div>
 
-     
       {selectedProduct && (
-        <div className="modal_overlay" onClick={() => setSelectedProduct(null)}>
-          <div className="modal_content" onClick={(e) => e.stopPropagation()}>
-            <button className="close_btn" onClick={() => setSelectedProduct(null)}>×</button>
-            <img src={selectedProduct.thumbnail} alt={selectedProduct.title} />
+        <div
+          className="modal_overlay"
+          onClick={() => setSelectedProduct(null)}
+        >
+          <div
+            className="modal_content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="close_btn"
+              onClick={() => setSelectedProduct(null)}
+            >
+              ×
+            </button>
+            <img
+              src={selectedProduct.thumbnail}
+              alt={selectedProduct.title}
+            />
             <h2>{selectedProduct.title}</h2>
-            <p><strong>Price:</strong> {selectedProduct.price}$</p>
-            <p><strong>Brand:</strong> {selectedProduct.brand}</p>
-            <p><strong>Description:</strong> {selectedProduct.description}</p>
+            <p>
+              <strong>Price:</strong> {selectedProduct.price}$
+            </p>
+            <p>
+              <strong>Brand:</strong> {selectedProduct.brand}
+            </p>
+            <p>
+              <strong>Description:</strong> {selectedProduct.description}
+            </p>
           </div>
         </div>
       )}

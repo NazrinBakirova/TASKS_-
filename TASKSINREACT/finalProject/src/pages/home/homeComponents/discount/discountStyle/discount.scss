@@ -139,3 +139,90 @@
     }
   }
   
+
+  @media screen and (max-width: 480px) {
+    .discount {
+      padding: 30px 10px;
+  
+      &__header {
+        h3 {
+          font-size: 24px;
+          margin-bottom: 8px;
+        }
+  
+        .discount__categories {
+          flex-wrap: wrap;
+          gap: 10px;
+  
+          span {
+            font-size: 12px;
+  
+            &.active {
+              font-size: 12px;
+            }
+  
+            &::after {
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+  
+      &__content {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+  
+        .discount__text {
+          h2 {
+            font-size: 22px;
+            margin-bottom: 8px;
+          }
+  
+          h4 {
+            font-size: 16px;
+            margin-bottom: 12px;
+          }
+  
+          p {
+            font-size: 13px;
+            margin-bottom: 16px;
+            line-height: 1.4;
+          }
+  
+          .discount__features {
+            gap: 10px 20px;
+  
+            li {
+              font-size: 12px;
+              padding-left: 18px;
+  
+              &::before {
+                left: 0;
+                font-size: 12px;
+              }
+            }
+          }
+  
+          button {
+            padding: 8px 20px;
+            font-size: 13px;
+          }
+        }
+  
+        .discount__image {
+          margin-top: 20px;
+  
+          .circle-bg {
+            width: 220px;
+            height: 220px;
+          }
+  
+          img {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+  

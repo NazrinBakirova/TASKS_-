@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { blogPosts } from "./blogData";
-import './blogStyle/blog.css'; 
+import './blogStyle/blog.scss'; 
 
 const Blog = () => {
   return (

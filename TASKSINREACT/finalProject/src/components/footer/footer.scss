@@ -94,3 +94,54 @@ $Josefine: "Josefin Sans", sans-serif;
     }
   }
 }
+
+
+@media only screen and (max-width: 480px)  {
+  .footer {
+    padding: 40px 20px;
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-column,
+    .logo-column {
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+
+      ul {
+        li {
+          line-height: 1.6;
+        }
+      }
+    }
+
+    .logo-column {
+      .footer-logo {
+        font-size: 24px;
+      }
+
+      .footer-subscribe {
+        flex-direction: column;
+
+        input {
+          width: 100%;
+          border-radius: 4px;
+          margin-bottom: 10px;
+        }
+
+        button {
+          width: 100%;
+          border-radius: 4px;
+        }
+      }
+
+      .footer-contact {
+        margin-top: 15px;
+      }
+    }
+  }
+}

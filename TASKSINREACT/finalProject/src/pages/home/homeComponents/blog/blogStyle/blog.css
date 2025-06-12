@@ -70,4 +70,41 @@
 .blog-section .blog-card .blog-content a:hover {
   text-decoration: underline;
   color: #FB2E86;
+}
+
+@media screen and (max-width: 480px) {
+  .blog-section {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .blog-section .blog-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .blog-section .blog-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .blog-section .blog-card {
+    width: 100%;
+    height: auto;
+  }
+  .blog-section .blog-card img {
+    height: 180px;
+  }
+  .blog-section .blog-card .blog-content {
+    padding: 20px;
+    gap: 8px;
+  }
+  .blog-section .blog-card .blog-content p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .blog-section .blog-card .blog-content h3 {
+    font-size: 16px;
+    margin: 8px 0 12px;
+  }
+  .blog-section .blog-card .blog-content a {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=blog.css.map */

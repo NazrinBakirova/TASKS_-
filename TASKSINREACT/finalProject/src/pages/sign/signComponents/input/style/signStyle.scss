@@ -1,0 +1,124 @@
+$pink: #FB2E86;
+$blue: #2A1B91;
+$OffNavyBlue: #485199;
+$NavyBlue: #1D1B70;
+$red: #DC3F4E;
+$purple: #763DD7;
+$OffPurple: #9467B0;
+$Font: #151875;
+
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Maven+Pro:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+$Lato: "Lato", sans-serif;
+$Josefine: "Josefin Sans", sans-serif;
+
+.login_table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9ff;
+  
+    &_items {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      width: 400px;
+      text-align: center;
+  
+      &_title h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+  
+      &_title p {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 25px;
+      }
+  
+      &_inputs {
+        display: flex;
+        flex-direction: column;
+  
+        input {
+          width: 100%;
+          padding: 12px;
+          margin-bottom: 15px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          font-size: 14px;
+        }
+      }
+  
+      &_buttons button {
+        width: 100%;
+        background-color: #ec4899;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+  
+      p {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+  
+      a {
+        color: #ec4899;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+    }
+  }
+  
+
+  @media only screen and (max-width: 430px) and (max-height: 932px) {
+    .login_table {
+      flex-direction: column;
+      padding: 20px;
+  
+      &_items {
+        width: 100%;
+        max-width: 360px; // чуть меньше ширины экрана
+        padding: 30px;
+  
+        &_title {
+          h1 {
+            font-size: 24px;
+          }
+          p {
+            font-size: 12px;
+            margin-bottom: 20px;
+          }
+        }
+  
+        &_inputs {
+          input {
+            padding: 10px;
+            font-size: 13px;
+            margin-bottom: 12px;
+          }
+        }
+  
+        &_buttons {
+          button {
+            padding: 10px;
+            font-size: 14px;
+          }
+        }
+  
+        p {
+          font-size: 12px;
+          margin-top: 15px;
+        }
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }

@@ -95,3 +95,48 @@ $Josefine: "Josefin Sans", sans-serif;
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .blog-section {
+    width: 100%;
+    padding: 20px 10px;
+
+    .blog-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .blog-list {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .blog-card {
+      width: 100%;
+      height: auto;
+
+      img {
+        height: 180px;
+      }
+
+      .blog-content {
+        padding: 20px;
+        gap: 8px;
+
+        p {
+          font-size: 13px;
+          line-height: 1.4;
+        }
+
+        h3 {
+          font-size: 16px;
+          margin: 8px 0 12px;
+        }
+
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

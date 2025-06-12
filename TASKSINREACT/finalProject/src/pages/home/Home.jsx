@@ -8,9 +8,9 @@ import Banner from './homeComponents/midBanner/Banner';
 import Trending from './homeComponents/trending/Trending';
 import Discount from './homeComponents/discount/Discount';
 import Top from './homeComponents/top/Top';
-import LastBan from './homeComponents/lastBanner/lastBan';
+import LastBan from './homeComponents/lastBanner/LastBan';
 import Blog from './homeComponents/blog/Blog';
-import Footer from '../../components/footer/footer';
+import Footer from '../../components/footer/Footer';
 
 const Home = () => {
   return (

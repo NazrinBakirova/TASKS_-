@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchProductsByCategory } from "../../../../api/Api";
-import "./discountStyle/discount.css";
+import "./discountStyle/discount.scss";
 
 const categories = [
   { label: "Wood Chair", value: "furniture" },

@@ -1,0 +1,51 @@
+$pink: #FB2E86;
+$blue: #2A1B91;
+$OffNavyBlue: #485199;
+$NavyBlue: #1D1B70;
+$red: #DC3F4E;
+$purple: #763DD7;
+$OffPurple: #9467B0;
+$Font: #151875;
+
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Maven+Pro:wght@400..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+$Lato: "Lato", sans-serif;
+$Josefine: "Josefin Sans", sans-serif;
+
+
+.contact_header {
+    width: max;
+height: 200px;
+background-color: #F6F5FF;
+display: flex;
+padding-top: 10vh;
+padding-left: 35vh;
+
+    
+    &_title{
+        font-family: $Josefine;
+font-weight: 700;
+font-size: 22px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #101750;
+
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .contact_header {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      padding: 8vh 10px;
+  
+      &_title {
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 1.2;
+        padding: 0 5px;
+      }
+    }
+  }
+  

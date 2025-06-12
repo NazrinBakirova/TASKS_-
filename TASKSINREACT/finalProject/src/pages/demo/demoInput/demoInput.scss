@@ -1,0 +1,107 @@
+.demo-input {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f8f9ff;
+    border-radius: 8px;
+    font-family: "Lato", sans-serif;
+    color: #151875;
+  
+    &__title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  
+    &__steps {
+      font-size: 0.875rem;
+      color: #7a7a9d;
+      margin-bottom: 1.5rem;
+    }
+  
+    &__section {
+      margin-bottom: 2rem;
+  
+      h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: #1d1b70;
+      }
+  
+      & .demo-input__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1rem;
+  
+        .demo-input__login-link {
+          font-size: 0.875rem;
+          color: #7a7a9d;
+          text-decoration: none;
+  
+          span {
+            color: #151875;
+            text-decoration: underline;
+            margin-left: 0.25rem;
+          }
+        }
+      }
+  
+      input,
+      select {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border: 1px solid #d8d8e9;
+        border-radius: 4px;
+        background: white;
+        font-size: 1rem;
+        color: #151875;
+        outline: none;
+  
+        &::placeholder {
+          color: #b0b0c3;
+        }
+      }
+  
+      .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+        color: #151875;
+  
+        input {
+          width: auto;
+          transform: scale(1.1);
+        }
+      }
+  
+      .row {
+        display: flex;
+        gap: 1rem;
+  
+        input,
+        select {
+          flex: 1;
+          margin-bottom: 0;
+        }
+      }
+    }
+  
+    .btn-continue {
+      padding: 0.75rem 1.5rem;
+      background: #fb2e86;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+  
+      &:hover {
+        background: darken(#fb2e86, 10%);
+      }
+    }
+  }
+  

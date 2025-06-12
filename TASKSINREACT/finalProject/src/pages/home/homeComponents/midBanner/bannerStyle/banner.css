@@ -70,4 +70,46 @@ body {
   font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .banner_table {
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+  }
+  .banner_table_items {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 0;
+  }
+  .banner_table_items_info {
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+  }
+  .banner_table_items_info h3 {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .banner_table_items_info_dis {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .banner_table_items_info_dis p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    justify-content: center;
+  }
+  .banner_table_items_info_btn {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .banner_table_items_info_btn button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=banner.css.map */

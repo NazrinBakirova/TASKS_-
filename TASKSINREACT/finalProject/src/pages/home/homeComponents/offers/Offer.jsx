@@ -1,5 +1,5 @@
 import React from 'react'
-import './offerStyle/offer.css'
+import './offerStyle/offer.scss'
 import cashback from './imgs/cashback 1.png'
 import group from './imgs/Group.png'
 import hours from './imgs/hours.png'
