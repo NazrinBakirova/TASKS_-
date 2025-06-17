@@ -12,6 +12,8 @@ import {
   FaRegHeart,
   FaHeart,
   FaSearch,
+  FaThLarge,
+  FaList,
 } from "react-icons/fa";
 import "./shopList.scss";
 
@@ -20,11 +22,11 @@ const CATEGORIES = ["furniture", "smartphones", "laptops"];
 const ShopList = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((s) => s.cart.items);
-  const wishlist  = useSelector((s) => s.wishlist.items);
+  const wishlist = useSelector((s) => s.wishlist.items);
 
   const [products, setProducts] = useState([]);
-  const [viewMode, setViewMode] = useState("list");
-  const [sortBy, setSortBy]     = useState("best");
+  const [viewMode, setViewMode] = useState("grid");
+  const [sortBy, setSortBy] = useState("best");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -56,16 +58,54 @@ const ShopList = () => {
   );
 
   const sorted = [...filtered].sort((a, b) => {
-    if (sortBy === "best")        return b.rating - a.rating;
-    if (sortBy === "price-asc")   return a.price - b.price;
-    if (sortBy === "price-desc")  return b.price - a.price;
+    if (sortBy === "best") return b.rating - a.rating;
+    if (sortBy === "price-asc") return a.price - b.price;
+    if (sortBy === "price-desc") return b.price - a.price;
     return 0;
   });
 
   return (
     <div className="shop-list">
-      {/* … header & controls … */}
+      {/* Header */}
+      <div className="shop-list__header">
+        <h2>Shop</h2>
+        <p>Browse our products</p>
+      </div>
 
+      {/* Controls */}
+      <div className="shop-list__controls">
+        <div className="control search">
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+        <div className="control sort-by">
+          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+            <option value="best">Best Rating</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+        <div className="control view-toggle">
+          <button
+            className={viewMode === "grid" ? "active" : ""}
+            onClick={() => setViewMode("grid")}
+          >
+            <FaThLarge />
+          </button>
+          <button
+            className={viewMode === "list" ? "active" : ""}
+            onClick={() => setViewMode("list")}
+          >
+            <FaList />
+          </button>
+        </div>
+      </div>
+
+      {/* Product Display */}
       {viewMode === "grid" ? (
         <div className="shop-list__grid">
           {sorted.map((p) => {
@@ -79,16 +119,28 @@ const ShopList = () => {
                       <FaShoppingCart />
                     </span>
                     <span onClick={() => toggleWishlist(p)}>
-                      {isFav
-                        ? <FaHeart className="heart active" />
-                        : <FaRegHeart className="heart" />}
+                      {isFav ? (
+                        <FaHeart className="heart active" />
+                      ) : (
+                        <FaRegHeart className="heart" />
+                      )}
                     </span>
                     <span onClick={() => setSelectedProduct(p)}>
                       <FaSearch />
                     </span>
                   </div>
                 </div>
-                {/* … info … */}
+                <div className="card__info">
+                  <h3 className="card__title">{p.title}</h3>
+                  <div className="card__prices">
+                    <span className="price">${p.price}</span>
+                    {p.discountPercentage && (
+                      <span className="old-price">
+                        ${(p.price / (1 - p.discountPercentage / 100)).toFixed(2)}
+                      </span>
+                    )}
+                  </div>
+                </div>
               </div>
             );
           })}
@@ -104,19 +156,31 @@ const ShopList = () => {
                 </div>
                 <div className="card__info">
                   <h3 className="card__title">{p.title}</h3>
-                  {/* … description & prices … */}
-                  <div className="card__actions">
-                    <span onClick={() => handleAddToCart(p)}>
-                      <FaShoppingCart />
-                    </span>
-                    <span onClick={() => toggleWishlist(p)}>
-                      {isFav
-                        ? <FaHeart className="heart active" />
-                        : <FaRegHeart className="heart" />}
-                    </span>
-                    <span onClick={() => setSelectedProduct(p)}>
-                      <FaSearch />
-                    </span>
+                  <p className="card__description">{p.description}</p>
+                  <div className="card__bottom">
+                    <div className="card__prices">
+                      <span className="price">${p.price}</span>
+                      {p.discountPercentage && (
+                        <span className="old-price">
+                          ${(p.price / (1 - p.discountPercentage / 100)).toFixed(2)}
+                        </span>
+                      )}
+                    </div>
+                    <div className="card__actions">
+                      <span onClick={() => handleAddToCart(p)}>
+                        <FaShoppingCart />
+                      </span>
+                      <span onClick={() => toggleWishlist(p)}>
+                        {isFav ? (
+                          <FaHeart className="heart active" />
+                        ) : (
+                          <FaRegHeart className="heart" />
+                        )}
+                      </span>
+                      <span onClick={() => setSelectedProduct(p)}>
+                        <FaSearch />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -125,7 +189,55 @@ const ShopList = () => {
         </div>
       )}
 
-      {/* … modal … */}
+      {/* Modal */}
+      {selectedProduct && (
+        <div
+          className="modal_overlay"
+          onClick={() => setSelectedProduct(null)}
+        >
+          <div
+            className="modal_content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="close_btn"
+              onClick={() => setSelectedProduct(null)}
+            >
+              &times;
+            </button>
+
+            <img
+              src={selectedProduct.thumbnail}
+              alt={selectedProduct.title}
+            />
+
+            <h2>{selectedProduct.title}</h2>
+            <p>{selectedProduct.description}</p>
+
+            <div className="card__prices">
+              <span className="price">${selectedProduct.price}</span>
+              {selectedProduct.discountPercentage && (
+                <span className="old-price">
+                  ${(selectedProduct.price / (1 - selectedProduct.discountPercentage / 100)).toFixed(2)}
+                </span>
+              )}
+            </div>
+
+            <div className="card__actions">
+              <span onClick={() => handleAddToCart(selectedProduct)}>
+                <FaShoppingCart />
+              </span>
+              <span onClick={() => toggleWishlist(selectedProduct)}>
+                {wishlist.some((i) => i.id === selectedProduct.id) ? (
+                  <FaHeart className="heart active" />
+                ) : (
+                  <FaRegHeart className="heart" />
+                )}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
